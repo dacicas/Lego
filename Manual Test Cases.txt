@@ -1,0 +1,158 @@
+Manual Test Cases:
+
+1. Scenario: User is able to login     IMPORTANT  DONE
+	Given I go to SwaglabsAutomation
+	When I add my credentials
+	Then I am able to login
+
+2. Scenario: User is not able to login with wrong credentials    IMPORTANT  DONE
+	Given I go to SwagLabsAutomation
+	When I add my incorrect credentials
+	Then I cant login to the website
+
+3. Scenario: User is able to sort names from Z to A
+	Given I login to the website
+	When I sort from Z to A
+	Then Items are sorted Z to A
+
+4. Scenario: User is able to sort names from A to Z
+	Given I login to the website
+	And I sort from Z to A
+	When I sort from A to Z
+	Then the items are sorted from A to Z
+
+5. Scenario: User is able to sort by price lowest to largest
+	Given I login to the website
+	When I select sort by price lowest to highest
+	Then the items are sorted by price lowest to highest
+
+6. Scenario: User is able to sort by price largest to lowest
+	Given I login to the website
+	When I select sort by price highest to lowest
+	Then the items are sorted by price highest to lowest
+
+7. Scenario: User is able to add the backpack to the cart   
+	Given I login to website
+	When I add a backpack to the cart
+	Then The backpack is added to the cart
+
+8. Scenario: User is able to add the bike light to the cart
+	Given I login to website
+	When I add a bike light to the cart
+	Then The bike light is added to the cart
+
+9. Scenario: User is able to add the Bolt T-Shirt to the cart
+	Given I login to website
+	When I add a Bolt T-Shirt to the cart
+	Then The Bolt T-Shirt is added to the cart
+
+10. Scenario: User is able to add the Fleece Jacket to the cart
+	Given I login to website
+	When I add a Fleece Jacket to the cart
+	Then The Fleece Jacket is added to the cart
+
+11. Scenario: User is able to add the Onesie to the cart
+	Given I login to website
+	When I add a Onesie to the cart
+	Then The Onesie is added to the cart
+
+12. Scenario: User is able to add T-shirt Red to the cart
+	Given I login to website
+	When I add a T-shirt Red to the cart
+	Then The T-shirt Red is added to the cart
+
+13. Scenario: User can add several items to cart   
+	Given I login to website
+	When I add several items to cart
+	Then The items are added to the cart
+
+14. Scenario: User can add all the items to cart    IMPORTANT DONE
+	Given I login to website
+	When I add all items to cart
+	Then All items are added to cart
+
+15 Scenario: User can change tabs after adding items to cart  IMPORTANT  (per Playwright doc, changing tabs can only happen as
+																		a result from website (link etc.), thus this test will not be
+																		automated)
+	Given I login to website
+	When I add several items to cart
+	And I check the cart
+	And I navigate to another tab
+	Then When i come back to the cart tab the items are still added
+
+16. Scenario: User can close the tab and the items remain in the cart (Website does not support this feature)
+	Given I login to website
+	And I add several items to cart
+	When I close the tab
+	And I open the previous tab
+	Then the items remain in the cart
+
+17. Scenario: User can add several items to cart then navigate to cart then continue shopping IMPORTANT DONE
+	Given I login to website
+	And I add several items to cart
+	And I click on cart
+	When I click on continue shopping
+	Then I come back to the inventory window and items are still in cart
+
+18. Scenario: User can remove items from cart  IMPORTANT DONE
+	Given I login to website
+	And I add several items to cart
+	And I click on cart
+	When I remove an item from the cart
+	Then the item is removed from the cart
+
+19. Scenario: Users can add details in the first checkout window IMPORTANT  DONE
+	Given I login to website
+	And I add several items to cart
+	And I click on cart
+	And I click on checkout
+	When I add my info to the fields
+	Then I can continue with the checkout
+
+20. Scenario: User cant continue if they dont add info to the checkout window  IMPORTANT DONE
+	Given I login to website
+	And I add several items to cart
+	And I click on cart
+	And I click on checkout
+	When I dont add my information
+	Then I cant continue with the checkout
+
+21. Scenario: User checks if the added items are displayed correctly
+	Given I login to website
+	And I add several items to cart
+	And I click on cart
+	And I click on checkout
+	And I add my information
+	And I click continue
+	When I check the items
+	Then the items are correctly displayed
+
+22. Scenario: User checks if the total payment is correct
+	Given I login to website
+	And I add several items to cart
+	And I click on cart
+	And I click on checkout
+	And I add my information
+	When I click continue
+	Then I check the total is correctly calculated
+
+23.Scenario: User can cancel before checkout IMPORTANT  DONE
+	Given I login to website
+	And I add several items to cart
+	And I click on cart
+	And I click on checkout
+	And I add my information
+	And I click continue
+	When I click cancel
+	Then I return to the main shop page and the cart shows the number of items in the cart
+
+24.Scenario: User is able to finish the checkout process  IMPORTANT
+	Given I login to website
+	And I add several items to cart
+	And I click on cart
+	And I click on checkout
+	And I add my information
+	And I click continue
+	When I click finish
+	Then I see the thank you for your order message
+	

@@ -1,0 +1,34 @@
+
+### Test Strategy Document
+
+#### 1. **Introduction**
+   - **Purpose**: The purpose of this document is to outline the testing strategy for checking the quality of the SwagLabsAutomation website.
+   - **Scope**: For this project the scope is narrow in view, as the website itself is basic and the point of the project is to be a fast deliverable in automation and  CI/CD integration. 
+
+#### 2. **Objectives**
+   - **Goals**: The objectives of the testing process is to ensure that the website can perform basic authentication,  can display products and that the products are able to be purchased.
+	- The 3 most important functionalities:
+		- Checkout (confirming that the desired products can be bought) 
+		- Authentication (non-registerd users should not be able to buy products)
+		- Products are added to cart.
+	- The 3 least important features:
+		- Sorting items by different filters.
+		- checking each items description
+		- validating first/last name and zipcode
+		
+
+#### 3. **Test Approach**
+   - **Testing Levels**: As the project is in production, limited by time and with no availability of source code, product quality will be assessed by using E2E tests thus covering most customer use cases. 
+
+   - **Types of Testing**: Functional, Regression, End-2-End 
+
+   - **Testing Phases**: The first phase of testing is to produce 15-30 manual tests that cover most of the functionality on the website. The second phase of testing will be creating 5-10  Automated tests that will be a mix of functional tests and e2e tests covering most of the happy user cases. 
+
+
+#### 4. **Test Deliverables**
+   - **Documents**:1 Test Strategy. 15-30 manual tests. 5-10 Automated tests scripts. 1 test report.
+   - **Reports**: The automated test scripts will be run daily using CI/CD. A report should be available (nice to have)
+
+
+#### 6. **Test Tools**
+   - **Automation Tools**: Playwright, Cucumber, Java, ExtentReport (nice to have).
