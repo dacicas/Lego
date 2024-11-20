@@ -10,6 +10,8 @@ I tried to use Java and Page Object Modal initially but after learning more abou
 
 I tried implementing fixtures as that’s the way POM is done in Playwright but I couldn’t get it to work, I assume it was something to do with a configuration somewhere somehow that made importing pages from the project not working.  So I decided that making the tests as scripts as Playwright intended was the way forward. 
 
+I also added CI integration, the tests are running every push, pull and on schedule every day at 11:15 AM.
+
 ## Setup
 
 Have node.js (version 20.13.1) and npm (version 10.5.2) installed.
